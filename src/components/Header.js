@@ -1,10 +1,10 @@
 import Image from "next/image";
 
 import {
-    MenuIcon, 
+    MenuIcon,
     SearchIcon,
-    ShoppingCartIcon, 
-} from "@heroicons/react/outline"; 
+    ShoppingCartIcon,
+} from "@heroicons/react/outline";
 
 function Header() {
     return (
@@ -23,27 +23,32 @@ function Header() {
 
                 {/*Search*/}
                 <div className="hidden sm:flex items-center h-10 rounded-md bg-yellow-400 hover:bg-yellow-500 flex-grow cursor-pointer">
-                    <input 
-                    className="p-2 h-full w-6 flex-grow flex-shrink rounded-l-md focus:outline-none px-4"
-                    type="text"
+                    <input
+                        className="p-2 h-full w-6 flex-grow flex-shrink rounded-l-md focus:outline-none px-4"
+                        type="text"
                     />
-                    <SearchIcon className="h-12 p-4" /> 
+                    <SearchIcon className="h-12 p-4" />
                 </div>
 
                 {/* Right */}
                 <div className="text-white flex items-center text-xs space-x-6 mx-6 whitespace-nowrap">
                     <div className="link">
                         <p>Hello Steve</p>
-                        <p>Account & Lists</p>
+                        <p className="font-extrabold md:text-sm">Account & Lists</p>
                     </div>
                     <div className="link">
                         <p>Return</p>
-                        <p>& Orders</p>
+                        <p className="font-extrabold md:text-sm">& Orders</p>
                     </div>
 
-                    <div className="link">
-                        <ShoppingCartIcon className="h-10"/>
-                        <p>Basket</p>
+                    <div className="relative link flex items-center cursor-pointer">
+                        <span className="absolute top-0 right-0">0
+                        </span>
+
+                        <ShoppingCartIcon className="h-10" />
+                        <p className="hidden md:inline font-extrabold md:text-sm mt-2">
+                            Basket
+                        </p>
                     </div>
                 </div>
             </div>
