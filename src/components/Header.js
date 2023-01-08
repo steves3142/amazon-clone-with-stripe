@@ -7,7 +7,7 @@ import Image from "next/image";
 // import { useSelector } from "react-redux";
 // import { selectItems } from "../slices/basketSlice";
 // import { useRouter } from "next/router";
-// import { signIn, signOut, useSession } from "next-auth/client";
+import { signIn } from "next-auth/react"
 
 function Header() {
   // const items = useSelector(selectItems);
@@ -40,7 +40,7 @@ function Header() {
         {/* Right */}
         <div className="flex items-center text-xs text-white space-x-6 mx-6 whitespace-nowrap">
           <div
-            // onClick={!session ? signIn : signOut}
+            onClick={signIn()}
             className="cursor-pointer link"
           >
             <p className="hover:underline">
