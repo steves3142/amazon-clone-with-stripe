@@ -7,11 +7,12 @@ import Image from "next/image";
 // import { useSelector } from "react-redux";
 // import { selectItems } from "../slices/basketSlice";
 // import { useRouter } from "next/router";
-import { signIn } from "next-auth/react"
+// import { signIn } from "next-auth/react"
+import { useRouter } from "next/router";
 
 function Header() {
   // const items = useSelector(selectItems);
-  // const router = useRouter();
+  const router = useRouter();
   // const [session] = useSession();
 
   return (
@@ -19,7 +20,7 @@ function Header() {
       <div className="flex items-center bg-amazon_blue p-1 flex-grow py-2">
         <div className="mt-2 flex items-center flex-grow sm:flex-grow-0">
           <Image
-            // onClick={() => router.push("/")}
+            onClick={() => router.push("/")}
             src="https://links.papareact.com/f90"
             width={150}
             height={40}
@@ -40,7 +41,7 @@ function Header() {
         {/* Right */}
         <div className="flex items-center text-xs text-white space-x-6 mx-6 whitespace-nowrap">
           <div
-            onClick={signIn()}
+            // onClick={signIn()}
             className="cursor-pointer link"
           >
             <p className="hover:underline">
@@ -59,7 +60,7 @@ function Header() {
           </div>
 
           <div
-            onClick={() => router.push("/checkout")}
+            onClick={() => router.push('/checkout')}
             className="relative flex items-center cursor-pointer link"
           >
             <span className="absolute top-0 right-0 md:right-10 h-4 w-4 bg-yellow-400 text-center rounded-full text-black font-bold">
