@@ -24,14 +24,14 @@ function Checkout() {
         );
 
         // Redirect Customer to Checkout
-        //     const result = await stripe.redirectToCheckout({
-        //       sessionId: checkoutSession.data.id,
-        //     });
+            const result = await stripe.redirectToCheckout({
+              sessionId: checkoutSession.data.id,
+            });
 
-        //     if (result.error) {
-        //       alert(result.error.message);
-        //     }
-        //   };
+            if (result.error) {
+              alert(result.error.message);
+            }
+          };
 
         return (
             <div className='bg-grea-100'>
